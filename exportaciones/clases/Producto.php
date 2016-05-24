@@ -7,7 +7,6 @@ class Producto{
 	private $nano;
         private $nidusuario;
 	private $querysel;
-        
 	function __construct($nid=NULL,$snom=NULL,$ntot=NULL,$nano=NULL,$nidusuario=NULL){
 		$this->nidproducto=$nid;
 		$this->snombre=$snom;
@@ -78,34 +77,30 @@ class Producto{
 		return $valaux;
 	}
         
-        function Guardar($id){
-        
+	function guardar($id){
+
 	if($id==""){
-                        
-                    
-		$insertar=mysql_query("insert into id(nombre,totalusd,ano) values('".$registro."','".$apellido."','".$edad."','".$sexo."','".$estadoCivil."')");
+		
+		$insertar=mysql_query("insert into producto(nidproducto,snombre,ntotalusd,nano,nidusuario) values('".$nid."','".$snom."','".$ntot."','".$nano."','".$nidusuario."')");
 		
 		if($insertar){
-			header("Location: formulario.php?msj=2");
+			header("Location: formulario.php?");
 		}else{
-			header("Location: formulario.php?msj=9");
+			header("Location: formulario.php?");
 		}
-	
+        }
+        }	
 		
-		
-	function Modificar($id){
-		
-		$modificar=mysql_query("update from persona set nombre='".$nombre."',apellido='".$apellido."',edad='".$edad."',sexo='".$sexo."',estado='".$estadoCivil."' where id='".$idPersona."'");
+        function  Modificar($id){
+
+                $modificar=mysql_query("update from producto set snombre='".$snom."',ntotalusd='".$ntot."',nano='".$nano."',nidusuario='".$nidusuario."' where nidproducto='".$nidusuario."'");
 	
 		if($modificar){
-			header("Location: formulario.php?msj=3");
+			header("Location: formulario.php?");
 		}else{
-			header("Location: formulario.php?msj=9");
+			header("Location: formulario.php?");
 		}
 		
-	}
-	
-        }
-					
-}}
+	}				
+}
 ?>

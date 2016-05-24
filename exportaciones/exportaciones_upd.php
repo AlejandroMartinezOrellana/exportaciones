@@ -13,7 +13,12 @@
 <?php 
 include('menu.php');
 ?>
-SELECCIONAR
+SELECCIONAR<br></br>
+IDPRODUCTO: <input type="text" name="name"><br></br>
+NOMBRE: <input type="text" name="name"><br></br>
+TOTALUSD: <input type="text" name="name"><br></br>
+ANO: <input type="text" name="name"><br></br>
+<input type="submit" name="enviar" value="ACTUALIZAR">
 </body>
 </html>
 

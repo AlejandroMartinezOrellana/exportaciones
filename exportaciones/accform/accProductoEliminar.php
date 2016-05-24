@@ -1,6 +1,9 @@
 <?php
 include("../librerias.php");
-$oPro=new Producto();
+session_start();
+$oUsr=$_SESSION["oUsuario"];
+
+$oPro=new Producto(NULL,NULL,NULL,NULL,1);
 foreach ($_POST as $id){
 	$oPro->Elimina($id);	
 };
